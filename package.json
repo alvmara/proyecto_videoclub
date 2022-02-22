@@ -1,0 +1,19 @@
+{
+  "name": "proyecto_videoclub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvmara/proyecto_videoclub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvmara/proyecto_videoclub/issues"
+  },
+  "homepage": "https://github.com/alvmara/proyecto_videoclub#readme"
+}
