@@ -24,22 +24,22 @@ UsuarioController.traerUsuarioEmail = (req, res) => {
   });
 };
 
-
 UsuarioController.registraUsuario = async (req, res) => {
-    
-    //Registrando un usuario
-    
-        let nombre = req.body.nombre;
-        let edad = req.body.edad;
-        let apellido = req.body.apellido;
-        let apodo = req.body.apodo;
-        let email = req.body.email;
-        console.log("antes de encriptar",req.body.password);
-        let contraseña = bcrypt.hashSync(req.body.contraseña, Number.parseInt(authConfig.rounds)); 
-        
-        console.log("esta es la contraseña", contraseña);
-        //Comprobación de errores.....
-        
-        
+  //Registrando un usuario
+
+  let nombre = req.body.nombre;
+  let edad = req.body.edad;
+  let apellido = req.body.apellido;
+  let apodo = req.body.apodo;
+  let email = req.body.email;
+  console.log("antes de encriptar", req.body.password);
+  let contraseña = bcrypt.hashSync(
+    req.body.contraseña,
+    Number.parseInt(authConfig.rounds)
+  );
+
+  console.log("esta es la contraseña", contraseña);
+  //Comprobación de errores.....
+};
 
 module.exports = UsuarioController;

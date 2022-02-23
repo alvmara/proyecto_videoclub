@@ -22,5 +22,7 @@ app.use(cors(corsOptions)); //USO CORS
 app.use(router);
 
 db.then(() => {
+  console.log("MySQL conneccted");
+
   app.listen(PORT, () => console.log(`Server on port ${PORT}`)); //Conectado a la base de datos
 }).catch((err) => console.log(err.message));
