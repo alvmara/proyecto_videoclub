@@ -1,35 +1,26 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const db = require("./db.js");
 
-require("dotenv").config();
+const PORT = 3000;
 
-app.listen(process.env.PORT, () =>
-  console.log(`Server on port ${process.env.PORT}`)
-);
+const router = require("./router");
 
-// const express = require("express");
-// const app = express();
-// const cors = require("cors");
-// const db = require("./db.js");
+let corsOptions = {
+  //CONFIGURO OPCIONES DE CORS
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+};
 
-// const PORT = 3000;
+//Middleware
+app.use(express.json()); //PUEDO OBTENER JSON DEL BODY
+app.use(cors(corsOptions)); //USO CORS
 
-// const router = require("./router");
+app.use(router);
 
-// let corsOptions = {
-//   //CONFIGURO OPCIONES DE CORS
-//   origin: "*",
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   preflightContinue: false,
-//   optionsSuccessStatus: 204,
-// };
-
-// //Middleware
-// app.use(express.json()); //PUEDO OBTENER JSON DEL BODY
-// app.use(cors(corsOptions)); //USO CORS
-
-// app.use(router);
-
-// db.then(() => {
-//   app.listen(PORT, () => console.log(`Server on port ${PORT}`)); //Conectado a la base de datos
-// }).catch((err) => console.log(err.message));
+db.then(() => {
+  app.listen(PORT, () => console.log(`Server on port ${PORT}`)); //Conectado a la base de datos
+}).catch((err) => console.log(err.message));

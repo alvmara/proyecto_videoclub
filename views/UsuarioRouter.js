@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const UsuarioController = require("../controllers/UsuarioController");
 
 //Leer todos los usuarios
 router.get("/" /*, auth*/, UsuarioController.traeUsuarios);
