@@ -19,6 +19,7 @@ module.exports = (req, res, next) => {
           err,
         });
       } else {
+        // todo ha ido bien, el token es valido
         req.user = decoded;
         next();
       }
