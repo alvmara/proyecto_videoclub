@@ -74,7 +74,6 @@ UsuarioController.registraUsuario = async (req, res) => {
     },
   })
     .then((datosRepetidos) => {
-      console.log("kdjksdj", datosRepetidos);
       if (datosRepetidos == 0) {
         Usuario.create({
           name: name,
