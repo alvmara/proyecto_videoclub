@@ -14,25 +14,10 @@ PeliculasController.peliculasTitulo = async (req, res) => {
     res.json(pelicula)
   );
 };
-
-PeliculasController.peliculasAdultas = (req, res) => {
-  //todas las películas que no sean para niños
-
-  Pelicula.findAll({
-    where: {
-      adult: false,
-    },
-  })
-    .then((peliculasAdultas) => {
-      if (peliculasAdultas != 0) {
-        res.send(peliculasAdultas);
-      } else {
-        res.send("No hay películas que no sean para niños");
-      }
-    })
-    .catch((error) => {
-      res.send(error);
-    });
+PeliculasController.peliculasId = async (req, res) => {
+  Pelicula.findOne({ where: { id: req.params.id } }).then((pelicula) =>
+    res.json(pelicula)
+  );
 };
 
 module.exports = PeliculasController;

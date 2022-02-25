@@ -10,9 +10,8 @@ const PeliculasController = require("../controllers/PeliculasController");
 router.get("/", PeliculasController.traePeliculas);
 //http://localhost:3000/peliculas
 
-router.get("/adultos", PeliculasController.peliculasAdultas);
-
 //Búsqueda de películas por título
 router.get("/titulo", PeliculasController.peliculasTitulo);
+router.get("/id/:id", PeliculasController.peliculasId);
 
 module.exports = router;
