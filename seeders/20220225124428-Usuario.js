@@ -1,4 +1,6 @@
 "use strict";
+const bcrypt = require("bcrypt");
+const authConfig = require("../config/auth");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -8,7 +10,7 @@ module.exports = {
         {
           name: "Frannie Milvarnie",
           email: "fmilvarnie0@trellian.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -19,7 +21,7 @@ module.exports = {
         {
           name: "Nowell Davidofski",
           email: "ndavidofski1@aol.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 22,
           surname: "Valencia",
@@ -30,7 +32,7 @@ module.exports = {
         {
           name: "Bearnard Niess",
           email: "bniess2@twitter.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 48,
           surname: "Albacete",
@@ -41,7 +43,7 @@ module.exports = {
         {
           name: "Frannie Ishaki",
           email: "fishaki3@mapquest.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 28,
           surname: "Valencia",
@@ -52,7 +54,7 @@ module.exports = {
         {
           name: "Goldina Peaple",
           email: "gpeaple4@nsw.gov.au",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 68,
           surname: "Valencia",
@@ -63,7 +65,7 @@ module.exports = {
         {
           name: "Cassey Le Frank",
           email: "cle5@icq.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 28,
           surname: "Valencia",
@@ -74,7 +76,7 @@ module.exports = {
         {
           name: "Cristobal McKinstry",
           email: "cmckinstry6@goodreads.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -85,7 +87,7 @@ module.exports = {
         {
           name: "Laural Remmers",
           email: "lremmers7@unblog.fr",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 58,
           surname: "Albacete",
@@ -96,7 +98,7 @@ module.exports = {
         {
           name: "Riobard Cape",
           email: "rcape8@oracle.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 22,
           surname: "Valencia",
@@ -107,7 +109,7 @@ module.exports = {
         {
           name: "Abelard Simonutti",
           email: "asimonutti9@mlb.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 29,
           surname: "Valencia",
@@ -118,7 +120,7 @@ module.exports = {
         {
           name: "Janice Wile",
           email: "jwilea@geocities.jp",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 33,
           surname: "Valencia",
@@ -129,7 +131,7 @@ module.exports = {
         {
           name: "Costa Kelston",
           email: "ckelstonb@nature.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 12,
           surname: "Getafe",
@@ -140,7 +142,7 @@ module.exports = {
         {
           name: "Poul Lautie",
           email: "plautiec@ucoz.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 10,
           surname: "Albacete",
@@ -151,7 +153,7 @@ module.exports = {
         {
           name: "Bevin Spedding",
           email: "bspeddingd@europa.eu",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 20,
           surname: "Valencia",
@@ -162,7 +164,7 @@ module.exports = {
         {
           name: "Mireielle Perfitt",
           email: "mperfitte@bizjournals.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 21,
           surname: "Valencia",
@@ -173,7 +175,7 @@ module.exports = {
         {
           name: "Raina Bontine",
           email: "rbontinef@census.gov",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 22,
           surname: "Valencia",
@@ -184,7 +186,7 @@ module.exports = {
         {
           name: "Benedetta Rickarsey",
           email: "brickarseyg@youku.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 23,
           surname: "Getafe",
@@ -195,7 +197,7 @@ module.exports = {
         {
           name: "Albie Ygou",
           email: "aygouh@aol.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 24,
           surname: "Valencia",
@@ -206,7 +208,7 @@ module.exports = {
         {
           name: "Allegra Riedel",
           email: "ariedeli@pen.io",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -217,7 +219,7 @@ module.exports = {
         {
           name: "Kanicknameina Kerrod",
           email: "kkerrodj@issuu.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -228,7 +230,7 @@ module.exports = {
         {
           name: "Ramon Lewtey",
           email: "rlewteyk@paginegialle.it",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -239,7 +241,7 @@ module.exports = {
         {
           name: "Issiah Weatherhead",
           email: "iweatherheadl@time.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -250,7 +252,7 @@ module.exports = {
         {
           name: "Ira Kybird",
           email: "ikybirdm@privacy.gov.au",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -261,7 +263,7 @@ module.exports = {
         {
           name: "Barrett Moors",
           email: "bmoorsn@pcworld.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -272,7 +274,7 @@ module.exports = {
         {
           name: "Broderick Kenion",
           email: "bkeniono@newsvine.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -283,7 +285,7 @@ module.exports = {
         {
           name: "Uriel Meconi",
           email: "umeconip@wufoo.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -294,7 +296,7 @@ module.exports = {
         {
           name: "Evangelia Tavner",
           email: "etavnerq@addthis.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -305,7 +307,7 @@ module.exports = {
         {
           name: "Celie Tunnah",
           email: "ctunnahr@usatoday.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -316,7 +318,7 @@ module.exports = {
         {
           name: "Allin Massard",
           email: "amassards@vistaprint.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -327,7 +329,7 @@ module.exports = {
         {
           name: "Conney Donovin",
           email: "cdonovint@indiatimes.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -338,7 +340,7 @@ module.exports = {
         {
           name: "Jsandye Dingsdale",
           email: "jdingsdaleu@canalblog.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -349,7 +351,7 @@ module.exports = {
         {
           name: "Koenraad Eccott",
           email: "keccottv@gravatar.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -360,7 +362,7 @@ module.exports = {
         {
           name: "Yettie Valentine",
           email: "yvalentinew@github.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -371,7 +373,7 @@ module.exports = {
         {
           name: "Evaleen Faircloth",
           email: "efairclothx@irs.gov",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -382,7 +384,7 @@ module.exports = {
         {
           name: "Kellen Woolens",
           email: "kwoolensy@tinyurl.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -393,7 +395,7 @@ module.exports = {
         {
           name: "Silvester Kenneway",
           email: "skennewayz@newsvine.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -404,7 +406,7 @@ module.exports = {
         {
           name: "Boris Marciskewski",
           email: "bmarciskewski10@lulu.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -415,7 +417,7 @@ module.exports = {
         {
           name: "Mohandas Rainy",
           email: "mrainy11@yelp.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -426,7 +428,7 @@ module.exports = {
         {
           name: "Oliy McGuirk",
           email: "omcguirk12@prlog.org",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -437,7 +439,7 @@ module.exports = {
         {
           name: "Kanya Kinneir",
           email: "kkinneir13@dailymotion.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",
@@ -448,7 +450,7 @@ module.exports = {
         {
           name: "Bone Bake",
           email: "bbake14@census.gov",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -459,7 +461,7 @@ module.exports = {
         {
           name: "Ezra Towse",
           email: "etowse15@blogspot.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -470,7 +472,7 @@ module.exports = {
         {
           name: "Hill Sleaford",
           email: "hsleaford16@zimbio.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -481,7 +483,7 @@ module.exports = {
         {
           name: "Randee Rentcome",
           email: "rrentcome17@yahoo.co.jp",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -492,7 +494,7 @@ module.exports = {
         {
           name: "Margette Gapper",
           email: "mgapper18@dropbox.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -503,7 +505,7 @@ module.exports = {
         {
           name: "Tawnya Grzegorzewski",
           email: "tgrzegorzewski19@hud.gov",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -514,7 +516,7 @@ module.exports = {
         {
           name: "Shirley Maidlow",
           email: "smaidlow1a@flickr.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -525,7 +527,7 @@ module.exports = {
         {
           name: "Xenia Figures",
           email: "xfigures1b@icq.com",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Valencia",
@@ -536,7 +538,7 @@ module.exports = {
         {
           name: "Ferdy Domoney",
           email: "fdomoney1c@joomla.org",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Getafe",
@@ -547,7 +549,7 @@ module.exports = {
         {
           name: "Talia Yarnall",
           email: "tyarnall1d@icio.us",
-          password: bcryt.hashsync("1234", Number.parseInt(authConfig.rounds)),
+          password: bcrypt.hashSync("1234", Number.parseInt(authConfig.rounds)),
           rol: false,
           age: 18,
           surname: "Albacete",

@@ -44,7 +44,7 @@ UsuarioController.registraUsuario = async (req, res) => {
     req.body.password,
     Number.parseInt(authConfig.rounds)
   );
-
+  //  bcrypt.hashSync("1234",Number.parseInt(authConfig.rounds);
   console.log("este es el password", password);
   //Comprobación de errores.....
 
