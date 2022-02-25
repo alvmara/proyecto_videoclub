@@ -15,20 +15,6 @@ UsuarioController.traeUsuarios = (req, res) => {
   });
 };
 
-UsuarioController.traerUsuarioId = (req, res) => {
-  //Búsqueda buscando una Id
-  Usuario.findByPk(req.params.id).then((data) => {
-    res.send(data);
-  });
-};
-
-UsuarioController.traerUsuarioEmail = (req, res) => {
-  //Búsqueda comparando un campo
-  Usuario.findOne({ where: { email: req.params.email } }).then((data) => {
-    res.send(data);
-  });
-};
-
 UsuarioController.registraUsuario = async (req, res) => {
   //Registrando un usuario
 
@@ -93,82 +79,6 @@ UsuarioController.registraUsuario = async (req, res) => {
         res.send(
           "El usuario con ese e-mail ya existe en nuestra base de datos"
         );
-      }
-    })
-    .catch((error) => {
-      res.send(error);
-    });
-};
-
-// /usuarios/updateProfile/1
-
-// UPDATE Usuarios SET name = 'valor', email='a.copm', ... WHERE id = 'valor';
-UsuarioController.updateProfile = async (req, res) => {
-  let datos = req.body;
-
-  let id = req.params.id;
-
-  try {
-    Usuario.update(datos, {
-      where: { id: id },
-    }).then((actualizado) => {
-      res.send(actualizado);
-    });
-  } catch (error) {
-    res.send(error);
-  }
-};
-
-UsuarioController.updatePassword = (req, res) => {
-  console.log("entramos");
-
-  let id = req.body.id;
-
-  let oldPassword = req.body.oldPassword;
-
-  let newPassword = req.body.newPassword;
-
-  Usuario.findOne({
-    where: { id: id },
-  })
-    .then((usuarioFound) => {
-      if (usuarioFound) {
-        if (bcrypt.compareSync(oldPassword, usuarioFound.password)) {
-          //En caso de que el Password antiguo SI sea el correcto....
-
-          //1er paso..encriptamos el nuevo password....
-
-          newPassword = bcrypt.hashSync(
-            newPassword,
-            Number.parseInt(authConfig.rounds)
-          );
-
-          ////////////////////////////////7
-
-          //2do paso guardamos el nuevo password en la base de datos
-
-          let data = {
-            password: newPassword,
-          };
-
-          console.log("esto es data", data);
-
-          Usuario.update(data, {
-            where: { id: id },
-          })
-            .then((actualizado) => {
-              res.send(actualizado);
-            })
-            .catch((error) => {
-              res
-                .status(401)
-                .json({ msg: `Ha ocurrido un error actualizando el password` });
-            });
-        } else {
-          res.status(401).json({ msg: "Usuario o contraseña inválidos" });
-        }
-      } else {
-        res.send(`Usuario no encontrado`);
       }
     })
     .catch((error) => {
