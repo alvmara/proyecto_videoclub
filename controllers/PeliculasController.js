@@ -1,10 +1,10 @@
 const { Pelicula } = require("../models/index");
 const { compareSync } = require("bcrypt");
+const axios = require("axios");
 
 const PeliculasController = {};
 
 //Funciones del controlador
-
 PeliculasController.traePeliculas = (req, res) => {
   Pelicula.findAll().then((peliculas) => res.json(peliculas));
 };
