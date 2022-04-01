@@ -70,7 +70,7 @@ UsuarioController.registraUsuario = async (req, res) => {
           nickname: nickname,
         })
           .then((usuario) => {
-            res.send(`${usuario.name}, bienvenida a este infierno`);
+            res.send(`${usuario.name}, bienvenid@ al videoclub`);
           })
           .catch((error) => {
             res.send(error);

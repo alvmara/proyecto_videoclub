@@ -1,13 +1,14 @@
 const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
+const auth = require("../middlewares/auth");
 
 const PeliculasController = require("../controllers/PeliculasController");
 
 //CRUD RESTful
 
 //Leer todas las peliculas
-router.get("/", PeliculasController.traePeliculas);
+router.get("/", auth, PeliculasController.traePeliculas);
 //http://localhost:3000/peliculas
 
 //Búsqueda de películas por título

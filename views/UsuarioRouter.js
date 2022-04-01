@@ -15,7 +15,7 @@ router.post("/", UsuarioController.registraUsuario);
 //http://localhost:3000/usuarios
 
 //Leer todos los usuarios
-router.get("/", auth, UsuarioController.traeUsuarios);
+router.get("/", auth, isAdmin, UsuarioController.traeUsuarios);
 // //http://localhost:3000/usuarios
 
 //Borramos a todos los usuarios
